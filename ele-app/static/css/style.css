@@ -31,3 +31,8 @@ html, body, #app{
     border-bottom: 1px solid #666;
     transform: scaleY(0.5);
 }
+.top-title{
+    font-size: 0.17rem;
+    font-weight: bolder;
+    color: #fff;
+}

@@ -1,15 +1,21 @@
 <template>
-    <page pageId="mine">
-        <h1>我的</h1>
+    <div>
+        <top>
+            <p class="top-title">我的</p>
+        </top>
+        <page pageId="mine">
 
-    </page>
+        </page>
+    </div>
 </template>
 
 <script>
 import Page from '../../common/Page.vue'
+import Top from '../../common/Top.vue'
 export default {
     components: {
-        [Page.name]: Page
+        [Page.name]: Page,
+        [Top.name]: Top
     },
     data(){
         return {

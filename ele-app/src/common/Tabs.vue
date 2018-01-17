@@ -37,6 +37,7 @@ export default {
     line-height: 49px;
     text-align: center;
     color: #8e8e93;
+    font-size: 0.13rem;
 }
 .tabs .tab.router-link-active{
     color: #0089dc;
