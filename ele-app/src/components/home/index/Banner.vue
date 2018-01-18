@@ -1,4 +1,5 @@
 <template>
+    <div>
     <div ref="banner" class="banner swiper-container">
         <div class="swiper-wrapper">
             <ul ref="slide" class="meun swiper-slide" v-for="(data, index) in bannerData" :key="index">
@@ -9,15 +10,17 @@
             </ul>
         </div>
         <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-        <!-- <div class="adv">
+        <div class="swiper-pagination pages" v-show="bannerData.length > 1"></div>
+        
+    </div>
+    <div class="adv">
             <img src="https://fuss10.elemecdn.com/3/c8/45b2ec2855ed55d90c45bf9b07abbpng.png?imageMogr/format/webp/thumbnail/!710x178r/gravity/Center/crop/710x178/">
-        </div> -->
+    </div>
     </div>
 </template>
 
 <script>
-import {getBannerdata} from '../../../server/HomeService'
+import {getBannerdata} from '../../../service/HomeService'
 export default {
     name: 'home-banner',
     data(){
@@ -53,7 +56,7 @@ export default {
 <style scoped>
 .banner{
     width: 100%;
-    height: 2.68rem;
+    height: 1.72rem;
     background: #fff;
 }
 .menu{
@@ -66,16 +69,17 @@ export default {
     width: 25%;
     height: 0.72rem;
     text-align: center;
-    margin: 0.1rem auto;
+    margin: 0.1rem auto 0;
 }
 .meun li img{
-    width: 0.45rem;
-    height: 0.45rem;
+    width: 0.42rem;
+    height: 0.42rem;
     margin: 0 0.2rem;
 }
 .meun li span{
     font-size: 0.12rem;
     color: #666;
+    text-align: center;
 }
 .adv{
     width: 100%;
@@ -83,7 +87,11 @@ export default {
 }
 .adv img{
     width: 3.4rem;
-    height: 0.78re;
+    height: 0.78re; 
     margin: 0 auto;
+}
+.pages{
+
+    bottom: 0;
 }
 </style>
