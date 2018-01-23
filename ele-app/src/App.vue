@@ -10,6 +10,10 @@ import Tabs from './common/Tabs.vue'
 export default {
   components: {
     [Tabs.name]: Tabs
+  },
+  created(){
+    this.$store.dispatch('location/initLocation');
+
   }
 }
 </script>

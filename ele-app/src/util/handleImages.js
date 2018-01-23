@@ -10,3 +10,13 @@ export function handleImage(path, size){
         return '';
     }
 }
+export function handleImageNotZip(path){
+    if(path){
+        let dataParams = path.endsWith('png')?'.png':'.jpeg';
+
+        return Api.IMAGE_HOST
+            + path + dataParams
+    }else{
+        return '';
+    }
+}

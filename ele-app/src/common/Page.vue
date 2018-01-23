@@ -102,6 +102,7 @@ export default {
     left: 0;
     bottom: 49px;
     overflow: hidden;
+    background: #f5f5f5;
 }
 
 .page .load-more{

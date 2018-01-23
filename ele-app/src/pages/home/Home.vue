@@ -49,7 +49,7 @@ export default {
         },
         //根据页面滚动的位置，控制是否展示search-bar
         handlePageScroll(y){
-            if(y<-45){
+            if(y<-50){
                 this.showSearchBar = true;
             }else{
                 this.showSearchBar = false;

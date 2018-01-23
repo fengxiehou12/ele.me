@@ -32,7 +32,7 @@
                             {{act.description}}
                     </li>
                 </ul>
-                <span class="btn" @click="showActAction(index)">{{seller.activities.length}}个活动</span>
+                <span class="btn" @click="showActAction(index)" v-show="seller.activities.length>2">{{seller.activities.length}}个活动</span>
             </div>
         </div>
     </li>
@@ -114,13 +114,15 @@ export default {
     margin-left: 0.1rem;
     position: relative;
 }
+.info-msg{
+    margin-bottom: 0.1rem;
+}
 .sup{
     position: absolute;
     right: 0;
     top: 0;
     color: #999;
-    font-size: 0.05rem;
-
+    font-size: 0.06rem;
     padding: 0.01rem;
 }
 .delivery{
@@ -138,7 +140,7 @@ export default {
 
 }
 .info span{
-    font-size: 0.1rem;
+    font-size: 0.11rem;
     color: #666;
 }
 .info-left{
@@ -168,9 +170,9 @@ export default {
 }
 .activities .btn{
     position: absolute;
-    top: 4px; 
-    right: 4px;
-    font-size: 12px;
+    top: 0.1rem; 
+    right: 0.1rem;
+    font-size: 0.1rem;
     color: #999;
     padding-right: 0.1rem;
 }
@@ -192,8 +194,12 @@ export default {
     padding-top: 0.07rem;
 }
 .act-list li{
-    font-size: 12px;
+    font-size: 0.11rem;
     color: #666;
     padding: 0.03rem 0;
+    width: 2.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 </style>

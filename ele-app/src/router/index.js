@@ -8,6 +8,8 @@ import Discover from '../pages/discover/Discover.vue'
 import Order from '../pages/order/Order.vue'
 import Mine from '../pages/mine/Mine.vue'
 import Detail from '../pages/home/Detail.vue'
+import Address from '../pages/home/Address.vue'
+
 export default new Router({
   routes: [
     {
@@ -18,6 +20,10 @@ export default new Router({
         {
           path: 'detail',
           component: Detail
+        },
+        {
+          path: 'address',
+          component: Address
         }
       ]
     },

@@ -93,3 +93,44 @@ export function getHomeSeller(lat, lon, offset, limit){
         })
     })
 }
+
+export function getLocation(lat, lon){
+    return new Promise((resolve, reject)=>{
+        axios.get(Api.LOCATION_URL, {
+            params: {
+                latitude: lat,
+                longitude: lon
+            }
+        })
+        .then(response=>{
+            resolve(response.data.name);
+        })
+    })
+}
+
+
+//搜索地址请求
+export function searchAddressList(keyword, offset, limit, lat, lon){
+    return new Promise((resolve, reject)=>{
+        axios.get(Api.SEARCH_ADDRESS_URL, {
+            params: {
+                keyword,
+                offset,
+                limit,
+                longitude: lon,
+                latitude: lat
+            }
+        })
+        .then(response=>{
+            let addresslist = response.data.map(item=>{
+                return {
+                    name: item.name,
+                    lon: item.longitude,
+                    lat: item.latitude,
+                    address: item.address
+                }
+            })
+            resolve(addresslist);
+        })
+    })
+}

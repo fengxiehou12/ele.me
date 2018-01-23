@@ -1,16 +1,17 @@
 <template>
     <div class="subpage" :id="pageId">
         <slot></slot>
- 
     </div>
 </template>
 
 <script>
+
 export default {
     name: 'sub-page',
     props: {
         pageId: String
     }
+    
 }
 </script>
 <style>
@@ -21,6 +22,7 @@ export default {
     left: 0;
     bottom: 0;
     z-index: 2;
+    background: #f4f4f4;
 }
 
 
